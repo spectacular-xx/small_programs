@@ -1,0 +1,14 @@
+# Written in Python 3.0
+# given an exchange rate and a limit, this program finds the exact money you need to pay to get even amount of dollars (no coin change)
+# I hate coin change. If you're like me, then this should be helpful to you
+
+# just change thess variables for any currency and limit you wish
+exchange_rate = 3.77
+limit = 5000 # keep searching until this limit
+
+for amount1 in range(limit):
+	amount2 = amount1 / exchange_rate
+	z = round(amount1 % 3.77, 2)
+
+	if (z==3.77):
+		print("You can get $", amount2, "when exchanging", amount1, "riyals")
